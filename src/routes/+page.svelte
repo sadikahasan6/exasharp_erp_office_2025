@@ -116,7 +116,7 @@
         { code: "en", name: "English" },
         { code: "bn", name: "বাংলা" },
     ];
-    var showDropdown = true;
+    var showDropdown = false;
 </script>
 
 <div
