@@ -90,23 +90,50 @@
         ) as HTMLSpanElement;
         type();
     });
+
+    let opacity = 1;
+
+    const maxScroll = 400; // The scroll distance at which opacity becomes 0
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const newOpacity = 1 - scrollY / maxScroll;
+        opacity = Math.max(0, Math.min(1, newOpacity)); // clamp between 0 and 1
+    };
+
+    onMount(() => {
+        handleScroll(); // ensure correct opacity on load
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    });
+
+    import { t } from "svelte-i18n";
+    import { locale } from "svelte-i18n";
+    import { fade, fly } from "svelte/transition";
+
+    locale.set("bn"); // Switch to bangla
+    const languages = [
+        { code: "en", name: "English" },
+        { code: "bn", name: "বাংলা" },
+    ];
+    var showDropdown = true;
 </script>
 
 <div
     class="relative w-full h-200 bg-[url(/pictures/oil-rig.jpg)] bg-cover p-10"
 >
     <div
-        class="transition backdrop-blur-none bg-white/20 dark:bg-black/40 gap-20 text-white/90 dark:text-white/80 w-fit h-10 sticky top-10 mx-auto rounded-full px-10 flex items-center"
+        class="z-40 transition backdrop-blur-none bg-white/20 dark:bg-black/40 gap-20 text-white/90 dark:text-white/80 w-fit h-10 sticky top-10 mx-auto rounded-full px-10 flex items-center"
     >
-        <div class="text-xl text-amber-100 flex items-center">EXASHARP</div>
+        <div class="text-xl text-amber-100 flex items-center">{$t('brand')}</div>
         <ul class="flex gap-10 items-center">
-            <li><a href="/">Overview</a></li>
+            <li><a href="/">{$t('services')}</a></li>
             <li><a href="/">Documentation</a></li>
             <li><a href="/">Download</a></li>
-            <li><a href="/">ERP</a></li>
             <li><a href="/">News</a></li>
             <li><a href="/">Community</a></li>
             <li><a href="/">Sponsor</a></li>
+            <li><a href="/">Sign in</a></li>
         </ul>
         <ul class="flex gap-8 items-center text-amber-100">
             <li class="flex items-center">
@@ -129,21 +156,56 @@
                 </button>
             </li>
             <li>
-                <a href="/"
-                    ><Icon icon="mdi:language" width="20" height="20" /></a
+                <button
+                    class="h-full flex items-center"
+                    on:click={() => (showDropdown = !showDropdown)}
+                    ><Icon icon="mdi:language" width="20" height="20" /></button
                 >
+                {#if showDropdown}
+                    <ul in:fly={{ y: 10, duration: 200 }} out:fade={{duration:100}} class="absolute flex flex-col p-1 gap-2 top-10 bg-white/70 dark:bg-black/70 dark:text-white  shadow rounded-lg text-black  overflow-hidden">
+                        {#each languages as { code, name }}
+                            <li>
+                                <button
+                                    class=" px-3 py-1.5 hover:bg-gray-100/80 w-full transition rounded-lg text-start dark:hover:text-black"
+                                    on:click={() => locale.set(code)}
+                                    >{name}</button
+                                >
+                            </li>
+                        {/each}
+                    </ul>
+                {/if}
             </li>
         </ul>
     </div>
-    <div class="mt-55 ml-20">
-        <div class="text-4xl font-mono text-white relative">
-            <span id="typewriter" class="border-r-4 border-white pr-1"
-            ></span>
+    <div
+        class=" flex flex-col w-200 mt-35 mx-auto gap-8 transition-opacity duration-700 ease-in-out"
+        style="opacity: {opacity};"
+    >
+        <div class="text-5xl font-mono text-white relative">
+            <span id="typewriter" class="border-r-4 border-white pr-1"></span>
+        </div>
+        <p class="text-white text-xl">
+            {$t("welcome")}
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci officia
+            quas, aperiam animi delectus id officiis recusandae voluptatum in ex
+            soluta? Corrupti, voluptas qui numquam nam hic maiores ad similique doloribus
+            inventore itaque error sequi iusto molestiae beatae ex quae animi maxime
+            aperiam culpa! Repellendus quam doloremque libero adipisci totam.
+        </p>
+        <div class="flex gap-5">
+            <button
+                class="w-fit cursor-pointer px-4 py-2 text-xl rounded-lg bg-white/70 dark:bg-black/70 dark:text-white"
+                >Learn more</button
+            >
+            <button
+                class="w-fit cursor-pointer px-4 py-2 text-xl rounded-lg dark:bg-white/70 bg-black/70 text-white dark:text-black"
+                >Sign in</button
+            >
         </div>
     </div>
 </div>
 
-<div class="dark:bg-zinc-800 dark:text-white transition">
+<div class="dark:bg-zinc-800 dark:text-white transition p-10">
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
     veritatis laudantium maxime ullam ut quae? Nobis a ullam quaerat officiis
     magnam tempora, assumenda sit odit temporibus voluptatem eos libero sed quia
