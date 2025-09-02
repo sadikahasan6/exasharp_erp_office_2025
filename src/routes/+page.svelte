@@ -133,26 +133,31 @@
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     });
-
-    
 </script>
 
 <div
     class="relative w-full h-200 bg-[url(/pictures/oil-rig.jpg)] bg-cover p-10 max-sm:p-5"
 >
     <div
-        class="z-40 transition backdrop-blur-none bg-white/20 max-xl:bg-white/90 dark:bg-black/40 max-xl:dark:bg-black/90 gap-20 text-white/90 max-xl:text-black dark:text-white/80 w-fit h-10 max-xl:h-auto sticky top-10 mx-auto rounded-full max-xl:rounded-3xl px-10  flex items-center max-xl:justify-between max-xl:w-full max-xl:flex-col max-xl:py-3"
-        use:clickOutside={() => (showDropdown = false , menuToggle=false)}
+        class="z-40 transition backdrop-blur-none bg-white/20 max-xl:bg-white/90 dark:bg-black/40 max-xl:dark:bg-black/90 gap-20 text-white/90 max-xl:text-black dark:text-white/80 w-fit h-10 max-xl:h-auto sticky top-10 mx-auto rounded-full max-xl:rounded-3xl px-10 flex items-center max-xl:justify-between max-xl:w-full max-xl:flex-col max-xl:py-3"
+        use:clickOutside={() => ((showDropdown = false), (menuToggle = false))}
     >
-        <div class="flex justify-between items-center max-xl:w-full text-amber-100 max-xl:dark:text-amber-100 max-xl:text-amber-900">
-            <a href="/" class="text-xl  flex items-center"
-                >{$t("brand")}</a
+        <div
+            class="flex justify-between items-center max-xl:w-full text-amber-100 max-xl:dark:text-amber-100 max-xl:text-amber-900"
+        >
+            <a href="/" class="text-xl flex items-center">{$t("brand")}</a>
+            <button
+                on:click={() => (menuToggle = !menuToggle)}
+                class="w-fit xl:hidden"
             >
-            <button on:click={()=>menuToggle=!menuToggle} class="w-fit xl:hidden">
                 <Icon icon="lucide:menu" width="24" height="24" />
             </button>
         </div>
-        <div class="flex items-center h-full gap-20 max-xl:flex-col max-xl:font-medium max-xl:text-lg transition {menuToggle ? "": "max-xl:hidden"}" >
+        <div
+            class="flex items-center h-full gap-20 max-xl:flex-col max-xl:font-medium max-xl:text-lg transition {menuToggle
+                ? ''
+                : 'max-xl:hidden'}"
+        >
             <ul class="flex gap-10 items-center max-xl:flex-col max-xl:gap-5">
                 <li><a href="/">{$t("services")}</a></li>
                 <li><a href="/">{$t("documentation")}</a></li>
@@ -162,7 +167,9 @@
                 <li><a href="/">{$t("sponsor")}</a></li>
                 <li><a href="/">{$t("sign_in")}</a></li>
             </ul>
-            <ul class="flex gap-8 items-center  text-amber-100 max-xl:dark:text-amber-100 max-xl:text-amber-900">
+            <ul
+                class="flex gap-8 items-center text-amber-100 max-xl:dark:text-amber-100 max-xl:text-amber-900"
+            >
                 <li class="flex items-center">
                     <button on:click={toggleTheme} class="flex items-center">
                         {#if theme === "default"}
@@ -224,15 +231,19 @@
         class=" flex flex-col w-200 max-xl:w-auto max-sm:min-w-70 max-md:min-w-100 max-xl:min-w-140 absolute left-1/2 -translate-x-1/2 top-60 max-md:top-40 mx-auto gap-8 transition-opacity duration-700 ease-in-out"
         style="opacity: {opacity};"
     >
-        <div class="text-5xl max-xl:text-4xl max-md:text-2xl max-sm:text-xl font-mono text-white relative">
+        <div
+            class="text-5xl max-xl:text-4xl max-md:text-2xl max-sm:text-xl font-mono text-white relative"
+        >
             <span id="typewriter" class="border-r-4 border-white pr-1"></span>
         </div>
-        <p class="text-white text-xl max-xl:text-lg max-md:text-md max-sm:text-sm">
+        <p
+            class="text-white text-xl max-xl:text-lg max-md:text-md max-sm:text-sm"
+        >
             {$t("home_para")}
         </p>
         <div class="flex gap-5 md:text-xl">
             <button
-                class="w-fit cursor-pointer px-4 py-2  rounded-lg bg-white/70 dark:bg-black/70 dark:text-white"
+                class="w-fit cursor-pointer px-4 py-2 rounded-lg bg-white/70 dark:bg-black/70 dark:text-white"
                 >{$t("learn_more")}</button
             >
             <button
@@ -243,29 +254,92 @@
     </div>
 </div>
 
-<div class="dark:bg-zinc-800 dark:text-white transition p-10">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-    veritatis laudantium maxime ullam ut quae? Nobis a ullam quaerat officiis
-    magnam tempora, assumenda sit odit temporibus voluptatem eos libero sed quia
-    accusamus optio eum animi, amet ex dolorum? Voluptate, voluptatibus saepe?
-    Provident consectetur optio quibusdam quod enim necessitatibus laboriosam
-    similique harum laborum tempora accusantium dolor dolore, deserunt suscipit
-    quasi officiis expedita quaerat sed sunt rerum culpa accusamus totam
-    doloremque beatae? Voluptatibus sequi vero eaque aliquam cupiditate quae
-    recusandae repellat at dolorem animi suscipit rem et, officiis ut odio
-    mollitia quis a nostrum! Nostrum ipsa ducimus doloribus similique dolorum
-    labore corporis eaque, delectus distinctio consequuntur dolorem! Dignissimos
-    minima quasi dolorem illo voluptatibus voluptas iusto consequatur saepe est
-    eveniet animi provident dicta molestias, tenetur non. Debitis deleniti
-    maxime voluptatem nihil explicabo, quam eligendi tempora in fugiat id
-    placeat animi, accusantium rerum! Repellat iure repellendus, laboriosam quae
-    iste, aliquam quos distinctio, quas ex ut eaque molestias officiis dolorem.
-    Dolorem aperiam aut ullam quae sunt. Provident illo voluptate hic, deleniti
-    labore distinctio numquam iste ducimus neque, necessitatibus, fugiat quos
-    ipsa unde reprehenderit libero minima soluta autem excepturi mollitia nobis
-    ipsam debitis dignissimos beatae totam. Sed voluptates quisquam corrupti
-    nulla quo magnam molestias quas alias!
+<div
+    class="flex flex-col items-center md:flex-row dark:bg-zinc-800 dark:text-white transition px-15 py-15 gap-10"
+>
+    <!-- Left Image Section -->
+    <div
+        class="flex-1/3 bg-[url('/pictures/drawing.jpg')] bg-cover bg-center rounded-lg h-120"
+    ></div>
+
+    <!-- Right Text Section -->
+    <div class="flex-2/3 ps-0 md:ps-20 max-lg:ps-10">
+        <h1 class="text-3xl md:text-5xl text-amber-900 dark:text-amber-400 leading-tight">
+            Make your business simple
+        </h1>
+        <p class="py-12 text-base md:text-lg leading-relaxed">
+            Make your business simple with an online-based service system that
+            centralizes operations, automates tasks, and reduces manual effort.
+            It saves time, cuts costs, and boosts accuracy while improving
+            customer satisfaction. By streamlining processes and enabling
+            real-time insights, businesses can focus on growth, productivity,
+            and sustainability in a competitive digital era.
+        </p>
+
+         <div class="flex gap-5 md:text-xl">
+
+            <button
+                class="w-fit cursor-pointer px-4 py-2 rounded-lg dark:bg-white/70 bg-black/70 text-white dark:text-black"
+                >Visit our services</button
+            >
+        </div>
+    </div>
 </div>
+
+<footer class="bg-zinc-900 text-gray-400 py-10 px-6 md:px-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+    
+    <!-- Left Logo/Brand -->
+    <div>
+      <h2 class="text-white text-xl font-semibold">EXASHARP</h2>
+      <p class="mt-2 text-sm max-w-xs">
+        Simplifying your business with online-based solutions for growth and efficiency.
+      </p>
+    </div>
+
+    <!-- Middle Links -->
+    <div class="flex gap-16">
+      <div>
+        <h3 class="text-white font-semibold mb-3">Products</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="hover:text-white">Services</a></li>
+          <li><a href="/" class="hover:text-white">Solutions</a></li>
+          <li><a href="/" class="hover:text-white">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="hover:text-white">About</a></li>
+          <li><a href="/" class="hover:text-white">Careers</a></li>
+          <li><a href="/" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Socials -->
+    <div>
+      <h3 class="text-white  font-semibold mb-3">Follow Us</h3>
+      <div class="flex gap-4">
+        <a href="/" class="hover:text-white">🌐</a>
+        <a href="/" class="hover:text-white">🐦</a>
+        <a href="/" class="hover:text-white">📘</a>
+        <a href="/" class="hover:text-white">▶️</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Note -->
+  <div class="mt-10 border-t border-zinc-700 pt-6 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center">
+    <p>© 2025 YourBrand. All rights reserved.</p>
+    <div class="flex gap-4 mt-2 md:mt-0">
+      <a href="/" class="hover:text-white">Privacy</a>
+      <a href="/" class="hover:text-white">Terms</a>
+      <a href="/" class="hover:text-white">Cookies</a>
+    </div>
+  </div>
+</footer>
+
 
 <style>
     #typewriter {
