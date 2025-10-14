@@ -264,7 +264,9 @@
 
     <!-- Right Text Section -->
     <div class="flex-2/3 ps-0 md:ps-20 max-lg:ps-10">
-        <h1 class="text-3xl md:text-5xl text-amber-900 dark:text-amber-400 leading-tight">
+        <h1
+            class="text-3xl md:text-5xl text-amber-900 dark:text-amber-400 leading-tight"
+        >
             Make your business simple
         </h1>
         <p class="py-12 text-base md:text-lg leading-relaxed">
@@ -276,8 +278,7 @@
             and sustainability in a competitive digital era.
         </p>
 
-         <div class="flex gap-5 md:text-xl">
-
+        <div class="flex gap-5 md:text-xl">
             <button
                 class="w-fit cursor-pointer px-4 py-2 rounded-lg dark:bg-white/70 bg-black/70 text-white dark:text-black"
                 >Visit our services</button
@@ -287,59 +288,101 @@
 </div>
 
 <footer class="bg-zinc-900 text-gray-400 py-10 px-6 md:px-20">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
-    
-    <!-- Left Logo/Brand -->
-    <div>
-      <h2 class="text-white text-xl font-semibold">EXASHARP</h2>
-      <p class="mt-2 text-sm max-w-xs">
-        Simplifying your business with online-based solutions for growth and efficiency.
-      </p>
+    <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10"
+    >
+        <!-- Left Logo/Brand -->
+        <div>
+            <h2 class="text-white text-xl font-semibold">EXASHARP</h2>
+            <p class="mt-2 text-sm max-w-xs">
+                Simplifying your business with online-based solutions for growth
+                and efficiency.
+            </p>
+        </div>
+
+        <!-- Middle Links -->
+        <div class="flex gap-16">
+            <div>
+                <h3 class="text-white font-semibold mb-3">Products</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-white">Services</a></li>
+                    <li><a href="/" class="hover:text-white">Solutions</a></li>
+                    <li><a href="/" class="hover:text-white">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-3">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-white">About</a></li>
+                    <li><a href="/" class="hover:text-white">Careers</a></li>
+                    <li><a href="/" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Socials -->
+        <div>
+            <h3 class="text-white font-semibold mb-3">Follow Us</h3>
+            <div class="flex gap-4 items-center">
+                <a href="/" class="hover:text-white" aria-label="facebook"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        {...$$props}
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                        />
+                    </svg></a
+                >
+                <a href="/" class="hover:text-white" aria-label="x"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 14 14"
+                        {...$$props}
+                    >
+                        <g fill="none">
+                            <g clip-path="url(#SVGG1Ot4cAD)">
+                                <path
+                                    fill="currentColor"
+                                    d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="SVGG1Ot4cAD">
+                                    <path fill="#fff" d="M0 0h14v14H0z" />
+                                </clipPath>
+                            </defs>
+                        </g>
+                    </svg></a
+                >
+                <a href="/" class="hover:text-white" aria-label="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" {...$$props}>
+	<path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+</svg></a>
+                <a href="/" class="hover:text-white" aria-label="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" {...$$props}>
+	<path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+</svg></a>
+            </div>
+        </div>
     </div>
 
-    <!-- Middle Links -->
-    <div class="flex gap-16">
-      <div>
-        <h3 class="text-white font-semibold mb-3">Products</h3>
-        <ul class="space-y-2">
-          <li><a href="/" class="hover:text-white">Services</a></li>
-          <li><a href="/" class="hover:text-white">Solutions</a></li>
-          <li><a href="/" class="hover:text-white">Pricing</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-white font-semibold mb-3">Company</h3>
-        <ul class="space-y-2">
-          <li><a href="/" class="hover:text-white">About</a></li>
-          <li><a href="/" class="hover:text-white">Careers</a></li>
-          <li><a href="/" class="hover:text-white">Contact</a></li>
-        </ul>
-      </div>
+    <!-- Bottom Note -->
+    <div
+        class="mt-10 border-t border-zinc-700 pt-6 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center"
+    >
+        <p>© 2025 EXASHARP. All rights reserved.</p>
+        <div class="flex gap-4 mt-2 md:mt-0">
+            <a href="/" class="hover:text-white">Privacy</a>
+            <a href="/" class="hover:text-white">Terms</a>
+            <a href="/" class="hover:text-white">Cookies</a>
+        </div>
     </div>
-
-    <!-- Right Socials -->
-    <div>
-      <h3 class="text-white  font-semibold mb-3">Follow Us</h3>
-      <div class="flex gap-4">
-        <a href="/" class="hover:text-white">🌐</a>
-        <a href="/" class="hover:text-white">🐦</a>
-        <a href="/" class="hover:text-white">📘</a>
-        <a href="/" class="hover:text-white">▶️</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom Note -->
-  <div class="mt-10 border-t border-zinc-700 pt-6 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center">
-    <p>© 2025 YourBrand. All rights reserved.</p>
-    <div class="flex gap-4 mt-2 md:mt-0">
-      <a href="/" class="hover:text-white">Privacy</a>
-      <a href="/" class="hover:text-white">Terms</a>
-      <a href="/" class="hover:text-white">Cookies</a>
-    </div>
-  </div>
 </footer>
-
 
 <style>
     #typewriter {
