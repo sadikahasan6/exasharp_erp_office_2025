@@ -32,7 +32,7 @@
     });
 </script>
 
-<div class="h-screen fixed w-full dark:bg-black/7 bg-lime-50">
+<div class="h-screen fixed w-full dark:bg-[url('/pictures/bg-dark.jpg')] bg-[url('/pictures/bg.jpg')] bg-cover bg-center">
     <div class="h-10 bg-black/20 m-5 py-6 px-8 flex items-center rounded-2xl">
         <span class=" text-amber-50 text-2xl flex items-center">EXASHARP</span>
     </div>
