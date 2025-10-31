@@ -1,0 +1,10 @@
+[
+    {"item": "Dashboard", "icon": "dashboard", "link": "/protected/dashboard"},
+    {"item": "Projects", "icon": "folder", "link": "/protected/projects"},
+    {"item": "Manage Employees", "icon": "folder", "link": "/protected/manage-employees"},
+    {"item": "Attendance", "icon": "calendar", "link": "/protected/attendance"},
+    {"item": "Notices", "icon": "bell", "link": "/protected/notices"},
+    {"item": "policies", "icon": "file-text", "link": "/protected/policies"},
+    {"item": "Teams", "icon": "users", "link": "/protected/teams"},
+    {"item": "Settings", "icon": "settings", "link": "/protected/settings"}
+]

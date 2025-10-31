@@ -255,21 +255,29 @@
 </div>
 
 <div
-    class="flex flex-col items-center md:flex-row dark:bg-zinc-800 dark:text-white transition px-15 py-15 gap-10"
+    class="flex flex-col items-center dark:bg-zinc-800 dark:text-white transition px-15 py-15 gap-10"
 >
-    <!-- Left Image Section -->
-    <div
-        class="flex-1/3 bg-[url('/pictures/drawing.jpg')] bg-cover bg-center rounded-lg h-120"
-    ></div>
-
-    <!-- Right Text Section -->
     <div class="flex-2/3 ps-0 md:ps-20 max-lg:ps-10">
         <h1
             class="text-3xl md:text-5xl text-amber-900 dark:text-amber-400 leading-tight"
         >
+            Streamline Your HR Processes
+        </h1>
+        <p class="py-8 text-base md:text-lg leading-relaxed">
+            Simplify your HR management with our comprehensive online system.
+            From employee records to attendance tracking, our platform offers
+            seamless solutions to enhance efficiency and productivity. Say
+            goodbye to paperwork and hello to streamlined HR processes that
+            empower your workforce and drive business success.
+        </p>
+    </div>
+    <div class="flex-2/3 ps-0 md:ps-20 max-lg:ps-10">
+        <h1
+            class="text-3xl text-right md:text-5xl text-amber-900 dark:text-amber-400 leading-tight"
+        >
             Make your business simple
         </h1>
-        <p class="py-12 text-base md:text-lg leading-relaxed">
+        <p class="py-8 text-right text-base md:text-lg leading-relaxed">
             Make your business simple with an online-based service system that
             centralizes operations, automates tasks, and reduces manual effort.
             It saves time, cuts costs, and boosts accuracy while improving
@@ -277,15 +285,34 @@
             real-time insights, businesses can focus on growth, productivity,
             and sustainability in a competitive digital era.
         </p>
-
+    </div>
+    <div
+        class="flex-2/3 ps-0 md:px-20 max-lg:px-10 rounded-2xl dark:bg-amber-950 bg-amber-200 py-8"
+    >
+        <h1
+            class="text-3xl md:text-5xl text-amber-900 dark:text-amber-400 leading-tight"
+        >
+            Visit Job Circulars
+        </h1>
+        <p class="py-8 text-base md:text-lg leading-relaxed">
+            Applicants can apply directly to employers who use our EXASHARP ERP
+            services. Our system connects job seekers with verified companies,
+            providing a smooth, efficient, and transparent application process
+            through an organized platform designed for both employers and
+            applicants.
+        </p>
         <div class="flex gap-5 md:text-xl">
             <button
                 class="w-fit cursor-pointer px-4 py-2 rounded-lg dark:bg-white/70 bg-black/70 text-white dark:text-black"
-                >Visit our services</button
+                >Apply now</button
             >
         </div>
     </div>
 </div>
+
+<div
+    class="flex flex-col items-center md:flex-row dark:bg-zinc-800 dark:text-white transition px-15 py-15 gap-10"
+></div>
 
 <footer class="bg-zinc-900 text-gray-400 py-10 px-6 md:px-20">
     <div
@@ -361,12 +388,34 @@
                         </g>
                     </svg></a
                 >
-                <a href="/" class="hover:text-white" aria-label="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" {...$$props}>
-	<path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
-</svg></a>
-                <a href="/" class="hover:text-white" aria-label="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" {...$$props}>
-	<path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
-</svg></a>
+                <a href="/" class="hover:text-white" aria-label="youtube"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        {...$$props}
+                    >
+                        <path
+                            fill="currentColor"
+                            d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+                        />
+                    </svg></a
+                >
+                <a href="/" class="hover:text-white" aria-label="instagram"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        {...$$props}
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                        />
+                    </svg></a
+                >
             </div>
         </div>
     </div>
