@@ -302,9 +302,9 @@
             applicants.
         </p>
         <div class="flex gap-5 md:text-xl">
-            <button
+            <a href="/jobs"
                 class="w-fit cursor-pointer px-4 py-2 rounded-lg dark:bg-white/70 bg-black/70 text-white dark:text-black"
-                >Apply now</button
+                >Apply now</a
             >
         </div>
     </div>
