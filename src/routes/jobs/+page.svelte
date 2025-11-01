@@ -50,7 +50,7 @@
                     />
                 </svg>
                 <div class="flex flex-col gap-0">
-                    <div class="text-lg">5000</div>
+                    <div class="text-lg">50,000 BDT</div>
                     <div class="text-zinc-400 text-xs">Negotiable</div>
                 </div>
             </div>
