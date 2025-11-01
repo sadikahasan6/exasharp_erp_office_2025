@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="h-screen flex flex-col gap-4 fixed inset-0 w-full bg-linear-to-r dark:text-zinc-300 from-white to-blue-50/50 dark:from-zinc-700 dark:to-gray-800 overflow-hidden"
+	class="h-screen flex flex-col gap-2 fixed inset-0 w-full bg-linear-to-r dark:text-zinc-300 from-white to-blue-50/50 dark:from-zinc-700 dark:to-gray-800 overflow-hidden"
 >
 	<TopNav />
 

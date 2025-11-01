@@ -32,7 +32,7 @@
         <div class="text-lg hover:text-blue-900 dark:hover:text-blue-400">
             Graphic Designer Needed for Canva Projects
         </div>
-        <div class="text-sm text-zinc-400">Posted 22 hours ago</div>
+        <div class="text-sm text-zinc-400 py-1">Posted 22 hours ago by MK Footwear PLC</div>
         <div class="flex justify-between py-3">
             <div
                 class="text-sm flex w-1/2 items-center gap-4 text-zinc-600 dark:text-zinc-200"
@@ -50,7 +50,7 @@
                     />
                 </svg>
                 <div class="flex flex-col gap-0">
-                    <div class="text-lg">$5000</div>
+                    <div class="text-lg">5000</div>
                     <div class="text-zinc-400 text-xs">Negotiable</div>
                 </div>
             </div>
