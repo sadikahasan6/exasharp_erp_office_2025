@@ -5,19 +5,21 @@
 </script>
 
 <div
-    class="h-screen flex flex-col gap-4 fixed w-full bg-linear-to-r dark:text-zinc-300 from-white to-blue-50/50 dark:from-zinc-700 dark:to-gray-800"
+	class="h-screen flex flex-col gap-4 fixed inset-0 w-full bg-linear-to-r dark:text-zinc-300 from-white to-blue-50/50 dark:from-zinc-700 dark:to-gray-800 overflow-hidden"
 >
-    <TopNav />
-    <div class="flex-1 flex gap-1">
-        <div class="w-68 h-full flex flex-col px-5 gap-2">
-            <SideNav {navItems} />
-        </div>
+	<TopNav />
 
-        <div
-            class="h-full flex-1 bg-white/80 rounded-2xl border border-blue-50 dark:border-0 dark:bg-zinc-600/85 dark:text-white px-10 py-5 mr-5"
-        >
-            <slot />
-        </div>
-    </div>
-    <div class="h-1 px-8 items-center"></div>
+	<div class="flex flex-1 gap-1 overflow-hidden">
+		<div class="w-68 flex flex-col px-5 gap-2">
+			<SideNav {navItems} />
+		</div>
+
+		<div
+			class="flex-1 overflow-y-auto bg-white/80 rounded-2xl border border-blue-50 dark:border-0 dark:bg-zinc-600/85 dark:text-white px-10 py-5 mb-5 mr-5"
+		>
+			<slot />
+		</div>
+	</div>
 </div>
+
+
