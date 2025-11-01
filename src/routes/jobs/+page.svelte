@@ -32,7 +32,7 @@
         <div class="text-lg hover:text-blue-900 dark:hover:text-blue-400">
             Graphic Designer Needed for Canva Projects
         </div>
-        <div class="text-sm text-zinc-400 py-1">Posted 22 hours ago by MK Footwear PLC</div>
+        <div class="text-xs text-zinc-400 py-1">Posted 22 hours ago by MK Footwear PLC</div>
         <div class="flex justify-between py-3">
             <div
                 class="text-sm flex w-1/2 items-center gap-4 text-zinc-600 dark:text-zinc-200"
@@ -79,6 +79,10 @@
             We are seeking a talented graphic designer to create visually
             appealing designs for our Canva projects. The ideal candidate should
             have experience with Canva and a strong portfolio of design work.
+        </div>
+        <div class="py-3 flex gap-2 text-zinc-500 dark:text-zinc-400">
+            <div class="text-xs py-1.5 px-3  bg-zinc-200 dark:bg-zinc-700 rounded-full">MK</div>
+            <div class="text-xs py-1.5 px-3  bg-zinc-200 dark:bg-zinc-700 rounded-full">Graphics</div>
         </div>
         <div class="py-3">
             <a
