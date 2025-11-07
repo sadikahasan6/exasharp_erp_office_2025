@@ -1,18 +1,15 @@
 <script lang="ts">
-    import { closeSidenavEffect } from "$lib/stores/closesideNav";
     let mode = false;
     let usercontrol = false;
     import { clickOutside } from "$lib/clickoutside";
     let theme: "default" | "light" | "dark" = "default";
-    function handleCloseSidenav() {
-        closeSidenavEffect.set(true);
-    }
+    export let toggleSidebar: () => void;
 </script>
 
 <div class="h-15 px-8 flex justify-between items-center">
     <div class="flex items-center gap-3 text-blue-900 dark:text-blue-300">
         <button
-            on:click={() => handleCloseSidenav()}
+            on:click={toggleSidebar}
             aria-label="Toggle side navigation"
             ><svg
                 xmlns="http://www.w3.org/2000/svg"
