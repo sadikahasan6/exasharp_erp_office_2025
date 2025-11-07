@@ -1,4 +1,5 @@
 <script lang="ts">
+    let mode = false;
     let usercontrol = false;
     import { clickOutside } from "$lib/clickoutside";
 </script>
@@ -21,37 +22,66 @@
             />
         </svg>
         <span class="  text-2xl flex items-center">EXASHARP</span>
-
     </div>
 
     <span class="flex gap-2 items-center cursor-pointer">
-        <span class="p-1.5">
-                    <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            {...$$props}
-        >
-            <g fill="none">
-                <circle
-                    cx="12"
-                    cy="12"
-                    r="9"
-                    stroke="currentColor"
-                    stroke-width="2"
-                />
-                <path
-                    fill="currentColor"
-                    d="M18.364 5.636A9 9 0 0 0 5.636 18.364L12 12z"
-                />
-            </g>
-        </svg>
-        </span>
+        <div class="relative flex items-center p-1.5">
+            <button
+            class="p-1 hover:bg-blue-100 dark:hover:bg-zinc-400/70 rounded-full cursor-pointer"
+                on:click={() => (mode = !mode)}
+                on:keydown={(e) =>
+                    e.key === "Enter" && (mode = !mode)}
+                type="button"
+                aria-label="Toggle user controls">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    class="hover:bg-blue-200 dark:bg-blend-soft-light rounded-full"
+                    {...$$props}
+                >
+                    <g fill="none">
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            fill="currentColor"
+                            d="M18.364 5.636A9 9 0 0 0 5.636 18.364L12 12z"
+                        />
+                    </g>
+                </svg>
+            </button>
+            <div
+                class="absolute top-10 flex flex-col gap-1 -right-1 w-34 border border-blue-100 dark:border-zinc-800 bg-white dark:bg-zinc-700 shadow-sm rounded-xl p-1.5 text-sm {mode
+                    ? ''
+                    : 'hidden'}"
+            >
+                <div
+                    class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
+                >
+                    System
+                </div>
+                <div
+                    class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
+                >
+                    Light mode
+                </div>
+
+                <div
+                    class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
+                >
+                    Dark mode
+                </div>
+            </div>
+        </div>
         <span
             class="h-10 w-10 rounded-full relative transition-all duration-100 dark:hover:bg-zinc-400/70 hover:bg-blue-100 justify-center items-center flex"
         >
-        
             <div
                 class="absolute hidden overflow-hidden top-11 flex-col gap-1 right-0 w-85 border border-blue-100 bg-white shadow-sm rounded-xl p-1.5 text-sm"
             >
