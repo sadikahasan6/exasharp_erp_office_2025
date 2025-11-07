@@ -4,13 +4,13 @@
 </script>
 
 <div class="h-15 px-8 flex justify-between items-center">
-    <div class="flex items-center gap-5 text-blue-900 dark:text-blue-300">
+    <div class="flex items-center gap-3 text-blue-900 dark:text-blue-300">
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="28"
+            height="28"
             viewBox="0 0 16 16"
-            class="hover:border-2 p-0.5 rounded-md hover:border-blue-300 cursor-pointer hover:bg-blue-100 dark:hover:bg-zinc-600/30 transition-all duration-150"
+            class="hover:border-2 p-0.5 rounded-md hover:border-blue-300 cursor-pointer hover:bg-blue-100 dark:hover:bg-zinc-600/30"
             {...$$props}
         >
             <path
