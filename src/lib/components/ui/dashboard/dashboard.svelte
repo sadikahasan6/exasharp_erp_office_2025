@@ -1,7 +1,10 @@
 <script lang="ts">
-    import SideNav from "$lib/components/ui/dashboard/side-nav.svelte";
-    import TopNav from "$lib/components/ui/dashboard/top-nav.svelte";
-    export let navItems: { name: string; href: string }[] = [];
+	import SideNav from "$lib/components/ui/dashboard/side-nav.svelte";
+	import TopNav from "$lib/components/ui/dashboard/top-nav.svelte";
+	export let navItems: { name: string; href: string }[] = [];
+	import { closeSidenavEffect } from "$lib/stores/closesideNav";
+	let active = false;
+	$: closeSidenavEffect.subscribe((v: boolean) => (active = v));
 </script>
 
 <div
@@ -10,8 +13,12 @@
 	<TopNav />
 
 	<div class="flex flex-1 gap-1 overflow-hidden">
-		<div class="w-68 flex flex-col px-5 gap-2">
-			<SideNav {navItems} />
+		<div class:active>
+			<div class="w-68 flex flex-col px-5 gap-2">
+				{#if active}
+					<SideNav {navItems} />
+				{/if}
+			</div>
 		</div>
 
 		<div
@@ -21,5 +28,3 @@
 		</div>
 	</div>
 </div>
-
-

@@ -1,40 +1,50 @@
 <script lang="ts">
+    import { closeSidenavEffect } from "$lib/stores/closesideNav";
     let mode = false;
     let usercontrol = false;
     import { clickOutside } from "$lib/clickoutside";
     let theme: "default" | "light" | "dark" = "default";
-    
+    function handleCloseSidenav() {
+        closeSidenavEffect.set(true);
+    }
 </script>
 
 <div class="h-15 px-8 flex justify-between items-center">
     <div class="flex items-center gap-3 text-blue-900 dark:text-blue-300">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 16 16"
-            class="hover:border-2 p-0.5 rounded-md hover:border-blue-300 cursor-pointer hover:bg-blue-100 dark:hover:bg-zinc-600/30"
-            {...$$props}
+        <button
+            on:click={() => handleCloseSidenav()}
+            aria-label="Toggle side navigation"
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 16 16"
+                class="hover:border-2 p-0.5 rounded-md hover:border-blue-300 cursor-pointer hover:bg-blue-100 dark:hover:bg-zinc-600/30"
+                {...$$props}
+            >
+                <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M1.25 3.25A.75.75 0 0 1 2 2.5h12A.75.75 0 0 1 14 4H2a.75.75 0 0 1-.75-.75m0 4.75A.75.75 0 0 1 2 7.25h12a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 8M2 12a.75.75 0 0 0 0 1.5h12a.75.75 0 0 0 0-1.5z"
+                    clip-rule="evenodd"
+                />
+            </svg></button
         >
-            <path
-                fill="currentColor"
-                fill-rule="evenodd"
-                d="M1.25 3.25A.75.75 0 0 1 2 2.5h12A.75.75 0 0 1 14 4H2a.75.75 0 0 1-.75-.75m0 4.75A.75.75 0 0 1 2 7.25h12a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 8M2 12a.75.75 0 0 0 0 1.5h12a.75.75 0 0 0 0-1.5z"
-                clip-rule="evenodd"
-            />
-        </svg>
         <span class="  text-2xl flex items-center">EXASHARP</span>
     </div>
 
     <span class="flex gap-2 items-center cursor-pointer">
-        <div use:clickOutside={() => (mode = false)} class="relative flex items-center p-1.5">
+        <div
+            use:clickOutside={() => (mode = false)}
+            class="relative flex items-center p-1.5"
+        >
             <button
-            class="p-1 hover:bg-blue-100 dark:hover:bg-zinc-400/70 rounded-full cursor-pointer"
+                class="p-1 hover:bg-blue-100 dark:hover:bg-zinc-400/70 rounded-full cursor-pointer"
                 on:click={() => (mode = !mode)}
-                on:keydown={(e) =>
-                    e.key === "Enter" && (mode = !mode)}
+                on:keydown={(e) => e.key === "Enter" && (mode = !mode)}
                 type="button"
-                aria-label="Toggle user controls">
+                aria-label="Toggle user controls"
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -63,35 +73,42 @@
                     ? ''
                     : 'hidden'}"
             >
-            <button on:click={() => {
-                
-                localStorage.removeItem('theme');
-                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-                document.documentElement.classList.toggle("dark", prefersDark);
-            }}
-                class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
-            >
-                System
-            </button>
-                <button on:click={() => {
-                    document.documentElement.classList.remove('dark');
-                    theme = 'light';
-                    localStorage.theme = "light";
-                }}
+                <button
+                    on:click={() => {
+                        localStorage.removeItem("theme");
+                        const prefersDark = window.matchMedia(
+                            "(prefers-color-scheme: dark)",
+                        ).matches;
+                        document.documentElement.classList.toggle(
+                            "dark",
+                            prefersDark,
+                        );
+                    }}
+                    class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
+                >
+                    System
+                </button>
+                <button
+                    on:click={() => {
+                        document.documentElement.classList.remove("dark");
+                        theme = "light";
+                        localStorage.theme = "light";
+                    }}
                     class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
                 >
                     Light mode
                 </button>
 
-                <button on:click={() => {
-                    document.documentElement.classList.add('dark');
-                    theme = 'dark';
-                    localStorage.theme = "dark";
-                }}
+                <button
+                    on:click={() => {
+                        document.documentElement.classList.add("dark");
+                        theme = "dark";
+                        localStorage.theme = "dark";
+                    }}
                     class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
                 >
                     Dark mode
-            </button>
+                </button>
             </div>
         </div>
         <span
