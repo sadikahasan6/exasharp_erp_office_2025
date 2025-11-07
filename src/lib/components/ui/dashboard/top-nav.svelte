@@ -4,13 +4,54 @@
 </script>
 
 <div class="h-15 px-8 flex justify-between items-center">
-    <span class=" text-blue-900 dark:text-blue-300 text-2xl flex items-center"
-        >EXASHARP</span
-    >
+    <div class="flex items-center gap-5 text-blue-900 dark:text-blue-300">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 16 16"
+            class="hover:border-2 p-0.5 rounded-md hover:border-blue-300 cursor-pointer hover:bg-blue-100 dark:hover:bg-zinc-600/30 transition-all duration-150"
+            {...$$props}
+        >
+            <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M1.25 3.25A.75.75 0 0 1 2 2.5h12A.75.75 0 0 1 14 4H2a.75.75 0 0 1-.75-.75m0 4.75A.75.75 0 0 1 2 7.25h12a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 8M2 12a.75.75 0 0 0 0 1.5h12a.75.75 0 0 0 0-1.5z"
+                clip-rule="evenodd"
+            />
+        </svg>
+        <span class="  text-2xl flex items-center">EXASHARP</span>
+
+    </div>
+
     <span class="flex gap-2 items-center cursor-pointer">
+        <span class="p-1.5">
+                    <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            {...$$props}
+        >
+            <g fill="none">
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                />
+                <path
+                    fill="currentColor"
+                    d="M18.364 5.636A9 9 0 0 0 5.636 18.364L12 12z"
+                />
+            </g>
+        </svg>
+        </span>
         <span
             class="h-10 w-10 rounded-full relative transition-all duration-100 dark:hover:bg-zinc-400/70 hover:bg-blue-100 justify-center items-center flex"
         >
+        
             <div
                 class="absolute hidden overflow-hidden top-11 flex-col gap-1 right-0 w-85 border border-blue-100 bg-white shadow-sm rounded-xl p-1.5 text-sm"
             >
