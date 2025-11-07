@@ -2,6 +2,8 @@
     let mode = false;
     let usercontrol = false;
     import { clickOutside } from "$lib/clickoutside";
+    let theme: "default" | "light" | "dark" = "default";
+    
 </script>
 
 <div class="h-15 px-8 flex justify-between items-center">
@@ -25,7 +27,7 @@
     </div>
 
     <span class="flex gap-2 items-center cursor-pointer">
-        <div class="relative flex items-center p-1.5">
+        <div use:clickOutside={() => (mode = false)} class="relative flex items-center p-1.5">
             <button
             class="p-1 hover:bg-blue-100 dark:hover:bg-zinc-400/70 rounded-full cursor-pointer"
                 on:click={() => (mode = !mode)}
@@ -61,22 +63,34 @@
                     ? ''
                     : 'hidden'}"
             >
-                <div
+                <button on:click={() => {
+                    document.documentElement.classList.remove('theme');
+                    theme = 'default';
+                    localStorage.removeItem('theme');
+                }}
                     class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
                 >
                     System
-                </div>
-                <div
+                </button>
+                <button on:click={() => {
+                    document.documentElement.classList.remove('dark');
+                    theme = 'light';
+                    localStorage.theme = "light";
+                }}
                     class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
                 >
                     Light mode
-                </div>
+                </button>
 
-                <div
+                <button on:click={() => {
+                    document.documentElement.classList.add('dark');
+                    theme = 'dark';
+                    localStorage.theme = "dark";
+                }}
                     class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
                 >
                     Dark mode
-                </div>
+            </button>
             </div>
         </div>
         <span
