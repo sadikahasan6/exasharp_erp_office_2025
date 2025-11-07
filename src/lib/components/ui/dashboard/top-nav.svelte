@@ -63,15 +63,16 @@
                     ? ''
                     : 'hidden'}"
             >
-                <button on:click={() => {
-                    document.documentElement.classList.remove('theme');
-                    theme = 'default';
-                    localStorage.removeItem('theme');
-                }}
-                    class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
-                >
-                    System
-                </button>
+            <button on:click={() => {
+                
+                localStorage.removeItem('theme');
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                document.documentElement.classList.toggle("dark", prefersDark);
+            }}
+                class="py-1.5 px-2 rounded-lg flex items-center gap-2 hover:bg-blue-400/10 dark:hover:text-white"
+            >
+                System
+            </button>
                 <button on:click={() => {
                     document.documentElement.classList.remove('dark');
                     theme = 'light';
