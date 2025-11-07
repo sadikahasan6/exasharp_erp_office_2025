@@ -106,9 +106,9 @@
 
 {#each jobs as job}
     <div
-        class="border cursor-pointer border-blue-100 dark:border-zinc-500 rounded-lg px-6 py-4"
+        class="border cursor-pointer border-blue-100 dark:border-zinc-500 rounded-lg px-6 py-3"
     >
-        <div class="text-lg hover:text-blue-900 dark:hover:text-blue-400">
+        <div class="max-sm:text-md text-lg hover:text-blue-900 dark:hover:text-blue-400">
             {job.title}
         </div>
         <div class="text-xs text-zinc-400 py-1">
@@ -116,7 +116,7 @@
         </div>
         <div class="flex justify-between py-3">
             <div
-                class="text-sm flex w-1/2 items-center gap-4 text-zinc-600 dark:text-zinc-200"
+                class="max-sm:text-xs text-sm flex w-1/2 items-center max-sm:gap-2 gap-4 text-zinc-600 dark:text-zinc-200"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,14 +131,14 @@
                     />
                 </svg>
                 <div class="flex flex-col gap-0">
-                    <div class="text-lg">{job.salary} BDT</div>
+                    <div class="max-sm:text-sm text-lg">{job.salary} BDT</div>
                     <div class="text-zinc-400 text-xs">
                         {job.salary_condition}
                     </div>
                 </div>
             </div>
             <div
-                class="text-sm flex w-1/2 items-center gap-4 text-zinc-600 dark:text-zinc-200"
+                class="max-sm:text-xs text-sm flex w-1/2 items-center max-sm:gap-2 gap-4 text-zinc-600 dark:text-zinc-200"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@
                     />
                 </svg>
                 <div class="flex flex-col gap-0">
-                    <div class="text-lg">{job.skillLevel}</div>
+                    <div class="max-sm:text-sm text-lg">{job.skillLevel}</div>
                     <div class="text-zinc-400 text-xs">Experience level</div>
                 </div>
             </div>

@@ -50,7 +50,7 @@
         <div
             class="flex-1 overflow-y-auto bg-white/80 rounded-2xl border {isSidebarOpen
                 ? 'max-lg:hidden'
-                : ''} border-blue-50 dark:border-0 dark:bg-zinc-600/85 dark:text-white px-10 py-5 mb-5"
+                : ''} border-blue-50 dark:border-0 dark:bg-zinc-600/85 dark:text-white px-10 max-sm:px-3 py-5 mb-5"
         >
             <slot />
         </div>
